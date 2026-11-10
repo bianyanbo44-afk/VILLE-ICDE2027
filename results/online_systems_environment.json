@@ -1,0 +1,37 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "packages": {
+    "torch": "2.12.0+cu126",
+    "transformers": "4.51.3",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.5.2",
+    "duckdb": "2.0.0"
+  },
+  "source_sha256": {
+    "semdec/online_benchmark.py": "f0f0f58563c181891f445ad8d1d9a505d5317a5cc3f83f6c90a9d353990b935a",
+    "semdec/core.py": "93aeb3ff2b733b731ba88aa61be8290b598887ff8a5b9af8d97e0b770dea40e4",
+    "semdec/run.py": "00d09e5eba5f13726758c9422818c3acec29aa9abf0fb3ee0a7956358f0740ae",
+    "results/d1_main.json": "0d06bc3002b401c4e7ab32309e90f86a2b603800ddaf6872fa389611da88a48f",
+    "results/d2_wor.json": "59215b37de83099e1efaa0b38b16641338fbb419635b6996e99b9202d8c117ce",
+    "results/d3_arxiv.json": "e8699f5fd1433176004be66533392f97b967fb22a112ef562ac24d98e8b5336e"
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 560.94, 8188 MiB",
+  "models": {
+    "qwen": "Qwen/Qwen2.5-1.5B-Instruct",
+    "smol": "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+  },
+  "smol_revision": "31b70e2e869a7173562077fd711b654946d38674",
+  "smol_weights_sha256": "f55217be716b6a997b97b9d8d7eb6fad02e00858f5010ec24f64603c3a98a0e8",
+  "timing_scope": "Resident model, prepared proxies, fresh calls per method. One measured exact pass per model shared across query forms. Interrupted standby measurements excluded.",
+  "distributed_source_sha256": {
+    "semdec/online_benchmark.py": "492acca2e2bdd1507c1aab0505aa9d6d760987a1c81cce701e54ed2e7e3b0516",
+    "semdec/core.py": "93aeb3ff2b733b731ba88aa61be8290b598887ff8a5b9af8d97e0b770dea40e4",
+    "semdec/run.py": "00d09e5eba5f13726758c9422818c3acec29aa9abf0fb3ee0a7956358f0740ae",
+    "results/d1_main.json": "0d06bc3002b401c4e7ab32309e90f86a2b603800ddaf6872fa389611da88a48f",
+    "results/d2_wor.json": "59215b37de83099e1efaa0b38b16641338fbb419635b6996e99b9202d8c117ce",
+    "results/d3_arxiv.json": "e8699f5fd1433176004be66533392f97b967fb22a112ef562ac24d98e8b5336e"
+  },
+  "post_measurement_source_change": "Completed-output flags now follow saved judgment arrays. Query execution and statistical calculations are identical to the measured source."
+}

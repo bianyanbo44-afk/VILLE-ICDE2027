@@ -1,0 +1,31 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph*{LLM-powered query processing}
+Semantic operators extend relational queries with natural-language filters, joins, rankings, and aggregations evaluated by LLMs~\cite{lotus,docetl,uqe,thalamusdb}.
+Their optimizers reduce LLM calls with model cascades, proxies, and sampling.
+LOTUS gives accuracy guarantees relative to a reference algorithm for filters, joins, and semantic group-by, and ranks tuples with LLM comparisons~\cite{lotus}.
+BARGAIN certifies the precision, recall, or accuracy of cascaded LLM classifiers with betting-style tests~\cite{bargain}.
+Evergreen verifies claims made in LLM-generated summaries of a relation by compiling each claim into a verification query; it estimates proportions with confidence sequences and stops early when a threshold claim is confirmed or refuted~\cite{evergreen}.
+These systems certify tuple-level outputs or individual claims.
+\sys{} targets group-level decision queries, tests their boundaries directly, and draws its savings from proxies that these confidence sequences do not use; we compare against an Evergreen-style confidence sequence in \Cref{sec:exp}.
+
+\paragraph*{Proxy-assisted analytics over expensive predicates}
+Video and unstructured-data analytics popularized cheap proxy models for expensive neural predicates~\cite{noscope,blazeit,supg,abae,tasti}.
+BlazeIt uses proxy scores as control variates and stops with an empirical Bernstein bound~\cite{blazeit,mnih2008}; ABae stratifies on proxy scores and samples within strata for aggregation queries, including group-by keys~\cite{abae}; SUPG selects records under precision or recall targets~\cite{supg}; and BaS combines blocking and sampling to estimate analytical joins over unstructured data with statistical guarantees~\cite{bas}.
+These methods estimate aggregates or select records, mostly with fixed-sample or central-limit guarantees.
+\sys{} shares their premise that proxies should shape sampling, but uses the proxy inside an e-process so that the decision, not an estimate, is certified under continuous monitoring.
+
+\paragraph*{Sampling-based decisions in visualization and AQP}
+Online aggregation showed that users stop queries once running estimates look good enough~\cite{ola}.
+IFOCUS orders bar-chart groups with Hoeffding--Serfling intervals and a union bound over rounds~\cite{ifocus}; SeeDB prunes candidate views with confidence intervals~\cite{seedb}; Macke et~al.\ tighten distribution-sensitive intervals and note that intervals can stop HAVING queries early~\cite{macke2021}.
+PilotDB provides a priori error guarantees for approximate queries with block sampling~\cite{pilotdb}.
+These works decide on cheap-to-read data and rely on range-based or fixed-sample bounds; \sys{} targets the regime in which every sample is an LLM call and tightens decisions with variance-adaptive betting and proxies.
+
+\paragraph*{Anytime-valid inference}
+Ville's inequality~\cite{ville1939} underlies confidence sequences~\cite{darling1967,howard2021} and the e-value framework for safe, anytime-valid inference~\cite{shafer2021,ramdas2023savi,grunwald2024}.
+Betting-based confidence sequences give tight, variance-adaptive intervals for bounded means, including sampling without replacement~\cite{wsr2024betting,wsr2020wor}.
+Prediction-powered inference combines model predictions with a few labels~\cite{ppi}, and recent work extends it to anytime-valid confidence sequences~\cite{avppi} and to e-values~\cite{ppevalues}.
+\sys{} applies the same rectifier to a finite population, in which every group's proxy mean is known exactly and tuples are drawn without replacement, and it tests only the boundaries that decide a query, for many groups at once.
+Best-arm and top-$k$ identification with indifference zones goes back to sequential selection~\cite{bechhofer1954} and LUCB-style algorithms~\cite{lucb}.
+\sys{} builds on these tools; its contribution is a query-processing layer that compiles HAVING, ORDER BY, and Top-$k$ queries into boundary e-processes, rectifies them with proxies under finite-population sampling, and pairs groups of very different sizes.

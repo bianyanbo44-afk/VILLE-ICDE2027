@@ -1,0 +1,96 @@
+\section{Query Processing in \sys}
+\label{sec:processing}
+
+\subsection{Architecture}
+
+\sys{} sits between the query engine and the LLM service.
+Before the first call, it computes the proxy score of every tuple in the queried groups, the group sizes $N_g$, and the proxy means $\bar p_g$.
+It then draws one random permutation per group; reading a group's tuples in this order realizes sampling without replacement, and every test of the group reads the same prefix.
+Calls are issued in rounds.
+In each round, every \emph{active} group or pair receives a batch of $b$ new tuples (we use $b=100$), the LLM judges them, and the tests update their wealth.
+A test that reaches $1/a$ fires, a decision that has fired is final, and a group leaves the active set once its currently required decisions are final.
+Checking the tests after every round is free: by \Cref{thm:main}, peeking at any frequency leaves the guarantee unchanged.
+
+\begin{algorithm}[t]
+\caption{\sys{} for HAVING}
+\label{alg:having}
+\begin{algorithmic}[1]
+\Require groups $1..K$, threshold $c$, margin $r$, level $\alpha$, batch $b$
+\State $a\gets\alpha/(2K)$;\ \ $\mathcal{A}\gets\{1,\dots,K\}$ \Comment{active groups}
+\State compute $p(t)$ for all tuples; $\bar p_g$, $\beta$, $[\ell_g,h_g]$
+\While{$\mathcal{A}\neq\emptyset$}
+  \For{$g\in\mathcal{A}$}
+    \State judge the next $b$ tuples of $g$ with the LLM; update $z$, $S$
+    \State update the four wealth processes of $g$ (\Cref{prop:one})
+    \If{$W[H^{\le}_g(c)]\ge 1/a$} report $g$ above; $\mathcal{A}\gets\mathcal{A}\setminus\{g\}$
+    \ElsIf{$W[H^{\ge}_g(c)]\ge 1/a$} report $g$ below; remove $g$
+    \ElsIf{both indifference tests fired} report $g$ as within $r$; remove $g$
+    \ElsIf{all tuples of $g$ judged} report the exact side; remove $g$
+    \EndIf
+  \EndFor
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{HAVING}
+
+\Cref{alg:having} runs the four tests of \Cref{sec:boundary} per group, each at level $\alpha/(2K)$.
+Groups are independent, so each stops on its own: groups far from the threshold leave after one or two rounds and the budget flows to the groups near it.
+A group whose mean lies within $r$ of $c$ is certified as indifferent and reported on the side of its current estimate, which is $r$-correct by definition.
+
+\subsection{\texorpdfstring{ORDER BY and Top-$k$}{ORDER BY and Top-k}}
+
+For orderings, \sys{} runs the four paired tests of \Cref{sec:pair} for every pair at level $\alpha/(2P)$ (\Cref{alg:order}), reusing the group prefixes so that a judged tuple serves all pairs of its group.
+A pair is resolved as ``$i$ ahead'', ``$j$ ahead'', or ``tie'' when its corresponding certificate fires. A tie certificate requires both indifference tests, giving $|\mu_i-\mu_j|<r$. If both groups are exhausted, their exact means resolve the pair directly.
+A group stays active until all of its pairs are resolved.
+\sys{} returns the groups sorted by the number of pairs they win, breaking ties by their estimates.
+When no test errs, a group that leads another by at least $r$ wins strictly more pairs (\Cref{thm:main}), so every such pair is ordered correctly, and pairs within $r$ may appear in either order.
+
+\begin{algorithm}[t]
+\caption{\sys{} for ORDER BY and Top-$k$}
+\label{alg:order}
+\begin{algorithmic}[1]
+\Require groups $1..K$, margin $r$, level $\alpha$, batch $b$, $k$ (Top-$k$ only)
+\State $P\gets K(K-1)/2$;\ \ $a\gets\alpha/(2P)$
+\State $\mathcal{U}\gets$ all pairs;\ \ $\mathcal{A}\gets$ all groups
+\While{$\mathcal{A}\neq\emptyset$}
+  \For{$g\in\mathcal{A}$} judge up to $b$ unread tuples; update $u_{g,\cdot}$ \EndFor
+  \For{$(i,j)\in\mathcal{U}$}
+    \If{both groups exhausted} resolve $(i,j)$ from exact means
+    \Else\ update four tests on their shared observed prefix
+      \State if a certificate fires, resolve $(i,j)$
+    \EndIf
+  \EndFor
+  \State remove resolved pairs from $\mathcal{U}$
+  \If{Top-$k$} $S\gets$ top $k$ groups by current estimate
+    \If{all groups exhausted} \Return exact top $k$ \EndIf
+    \If{every pair across $S$ is resolved in favour of $S$ or tied} \Return $S$ \EndIf
+    \State $\mathcal{A}\gets$ groups in unresolved pairs across $S$
+    \If{$\mathcal{A}=\emptyset$} $\mathcal{A}\gets$ all non-exhausted groups \EndIf
+  \Else
+    \If{$\mathcal{U}=\emptyset$} \Return groups sorted by pairs won, ties by estimate \EndIf
+    \State $\mathcal{A}\gets$ groups appearing in $\mathcal{U}$
+  \EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+Top-$k$ needs far fewer resolved pairs than a full ranking.
+After each round, \sys{} takes the current top $k$ groups by estimate, $S$, and checks whether every pair with one group in $S$ and one outside is resolved as ``ahead'' in favour of the $S$ member or as a tie.
+If so, it returns $S$; otherwise it continues sampling the groups of unresolved boundary pairs.
+Estimates use each group's actually observed prefix. A group may be reactivated when the candidate set changes, and all previous calls remain charged. If all boundary pairs are resolved but their outcomes do not certify the current candidate, sampling resumes on the non-exhausted groups, with an exact top-$k$ fallback at exhaustion.
+Pairs inside $S$ or entirely outside it never need to be resolved, which is why Top-$k$ is usually much cheaper than a full ranking.
+The proof of \Cref{thm:main} shows that the returned set is $r$-correct whenever no pair test errs.
+
+\subsection{\texorpdfstring{Choosing $\beta$ and the proxy}{Choosing beta and the proxy}}
+
+\Cref{lem:unbiased} allows any $\beta$ fixed before the query.
+\sys{} estimates $\beta=\mathrm{Cov}(y,p)/\mathrm{Var}(p)$ by cross-validation on the labeled set that trained the proxy and clips it to $[0,1]$.
+The same labeled set also caps the downside of a bad proxy: if the cross-validated correlation is near zero, $\beta\approx0$ and \sys{} reduces to betting on $y$.
+The proxy and its labeled set are reused across all queries over the same predicate, so their cost is paid once.
+
+\subsection{Cost of the decision layer}
+
+Each wealth update costs $O(1)$ arithmetic operations, and a round updates at most four tests per active group or pair.
+For $K=30$ groups, an ORDER BY query maintains $1{,}740$ tests, which is negligible next to a single LLM call.
+In the live executions of \Cref{sec:live}, certificate updates and query bookkeeping account for at most \numLiveMaxOverhead\% of query latency, so LLM calls dominate the execution cost.

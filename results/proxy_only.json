@@ -1,0 +1,302 @@
+{
+ "S:cat|NEG|having": [
+  true,
+  2
+ ],
+ "S:cat|NEG|order": [
+  true,
+  3
+ ],
+ "S:cat|NEG|topk": [
+  false,
+  0
+ ],
+ "S:cat|POS|having": [
+  false,
+  0
+ ],
+ "S:cat|POS|order": [
+  false,
+  0
+ ],
+ "S:cat|POS|topk": [
+  false,
+  0
+ ],
+ "S:cat|RAT|having": [
+  false,
+  0
+ ],
+ "S:cat|RAT|order": [
+  false,
+  0
+ ],
+ "S:cat|RAT|topk": [
+  false,
+  0
+ ],
+ "S:year|NEG|having": [
+  true,
+  2
+ ],
+ "S:year|NEG|order": [
+  true,
+  29
+ ],
+ "S:year|NEG|topk": [
+  true,
+  1
+ ],
+ "S:year|POS|having": [
+  false,
+  0
+ ],
+ "S:year|POS|order": [
+  false,
+  0
+ ],
+ "S:year|POS|topk": [
+  false,
+  0
+ ],
+ "S:year|RAT|having": [
+  false,
+  0
+ ],
+ "S:year|RAT|order": [
+  false,
+  0
+ ],
+ "S:year|RAT|topk": [
+  false,
+  0
+ ],
+ "S:prod-Amazon_Fashion|NEG|having": [
+  true,
+  1
+ ],
+ "S:prod-Amazon_Fashion|NEG|order": [
+  true,
+  3
+ ],
+ "S:prod-Amazon_Fashion|NEG|topk": [
+  true,
+  1
+ ],
+ "S:prod-Amazon_Fashion|POS|having": [
+  true,
+  1
+ ],
+ "S:prod-Amazon_Fashion|POS|order": [
+  true,
+  3
+ ],
+ "S:prod-Amazon_Fashion|POS|topk": [
+  false,
+  0
+ ],
+ "S:prod-Amazon_Fashion|RAT|having": [
+  false,
+  0
+ ],
+ "S:prod-Amazon_Fashion|RAT|order": [
+  true,
+  1
+ ],
+ "S:prod-Amazon_Fashion|RAT|topk": [
+  false,
+  0
+ ],
+ "S:prod-Appliances|NEG|having": [
+  true,
+  4
+ ],
+ "S:prod-Appliances|NEG|order": [
+  true,
+  31
+ ],
+ "S:prod-Appliances|NEG|topk": [
+  true,
+  2
+ ],
+ "S:prod-Appliances|POS|having": [
+  true,
+  1
+ ],
+ "S:prod-Appliances|POS|order": [
+  true,
+  8
+ ],
+ "S:prod-Appliances|POS|topk": [
+  false,
+  0
+ ],
+ "S:prod-Appliances|RAT|having": [
+  false,
+  0
+ ],
+ "S:prod-Appliances|RAT|order": [
+  true,
+  7
+ ],
+ "S:prod-Appliances|RAT|topk": [
+  false,
+  0
+ ],
+ "L:prod-Video_Games|DEFECT|having": [
+  true,
+  8
+ ],
+ "L:prod-Video_Games|DEFECT|order": [
+  true,
+  12
+ ],
+ "L:prod-Video_Games|DEFECT|topk": [
+  false,
+  0
+ ],
+ "L:prod-Musical_Instruments|DEFECT|having": [
+  false,
+  0
+ ],
+ "L:prod-Musical_Instruments|DEFECT|order": [
+  true,
+  9
+ ],
+ "L:prod-Musical_Instruments|DEFECT|topk": [
+  false,
+  0
+ ],
+ "L:year|DEFECT|having": [
+  true,
+  7
+ ],
+ "L:year|DEFECT|order": [
+  true,
+  3
+ ],
+ "L:year|DEFECT|topk": [
+  false,
+  0
+ ],
+ "L:prod-Video_Games|VALUE|having": [
+  false,
+  0
+ ],
+ "L:prod-Video_Games|VALUE|order": [
+  true,
+  10
+ ],
+ "L:prod-Video_Games|VALUE|topk": [
+  false,
+  0
+ ],
+ "L:prod-Musical_Instruments|VALUE|having": [
+  true,
+  4
+ ],
+ "L:prod-Musical_Instruments|VALUE|order": [
+  true,
+  4
+ ],
+ "L:prod-Musical_Instruments|VALUE|topk": [
+  false,
+  0
+ ],
+ "L:year|VALUE|having": [
+  true,
+  3
+ ],
+ "L:year|VALUE|order": [
+  true,
+  10
+ ],
+ "L:year|VALUE|topk": [
+  true,
+  1
+ ],
+ "L:prod-Video_Games|SENT|having": [
+  false,
+  0
+ ],
+ "L:prod-Video_Games|SENT|order": [
+  true,
+  2
+ ],
+ "L:prod-Video_Games|SENT|topk": [
+  false,
+  0
+ ],
+ "L:prod-Musical_Instruments|SENT|having": [
+  false,
+  0
+ ],
+ "L:prod-Musical_Instruments|SENT|order": [
+  false,
+  0
+ ],
+ "L:prod-Musical_Instruments|SENT|topk": [
+  false,
+  0
+ ],
+ "L:year|SENT|having": [
+  false,
+  0
+ ],
+ "L:year|SENT|order": [
+  false,
+  0
+ ],
+ "L:year|SENT|topk": [
+  false,
+  0
+ ],
+ "A:year|SOTA|having": [
+  false,
+  0
+ ],
+ "A:year|SOTA|order": [
+  false,
+  0
+ ],
+ "A:year|SOTA|topk": [
+  false,
+  0
+ ],
+ "A:area|SOTA|having": [
+  true,
+  1
+ ],
+ "A:area|SOTA|order": [
+  false,
+  0
+ ],
+ "A:area|SOTA|topk": [
+  false,
+  0
+ ],
+ "A:year|EMP|having": [
+  false,
+  0
+ ],
+ "A:year|EMP|order": [
+  false,
+  0
+ ],
+ "A:year|EMP|topk": [
+  false,
+  0
+ ],
+ "A:area|EMP|having": [
+  false,
+  0
+ ],
+ "A:area|EMP|order": [
+  true,
+  3
+ ],
+ "A:area|EMP|topk": [
+  false,
+  0
+ ]
+}

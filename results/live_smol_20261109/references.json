@@ -1,0 +1,40 @@
+{
+  "having": {
+    "answer": [],
+    "sql_seconds": 0.02848069999981817,
+    "sql": "SELECT product FROM judged GROUP BY product HAVING AVG(y)>0.20 ORDER BY product"
+  },
+  "order": {
+    "answer": [
+      6,
+      9,
+      8,
+      15,
+      2,
+      10,
+      4,
+      12,
+      0,
+      3,
+      13,
+      11,
+      1,
+      5,
+      7,
+      14
+    ],
+    "sql_seconds": 0.00352279999970051,
+    "sql": "SELECT product FROM judged GROUP BY product ORDER BY AVG(y) DESC, product"
+  },
+  "topk": {
+    "answer": [
+      6,
+      9,
+      8,
+      15,
+      2
+    ],
+    "sql_seconds": 0.001356599999780883,
+    "sql": "SELECT product FROM judged GROUP BY product ORDER BY AVG(y) DESC, product LIMIT 5"
+  }
+}

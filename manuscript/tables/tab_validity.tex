@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Errors over all 75 queries, each executed 30 times. Answer errors violate the returned-result definition of $r$-correctness. Decision errors concern a group or pair used by the answer, at least $r$ from its boundary, certified on the wrong side or as indifferent. The last column is the highest per-query answer-error rate.}
+\label{tab:validity}
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+Method & Answers & Decisions & Worst rate \\
+\midrule
+\sys{} & 0 / 2250 & 0 / 2250 & 0.00 \\
+\sys{}$-$P & 0 / 2250 & 0 / 2250 & 0.00 \\
+Evergreen-CS & 0 / 2250 & 0 / 2250 & 0.00 \\
+Evergreen-CS+P & 0 / 2250 & 0 / 2250 & 0.00 \\
+BlazeIt-EBS & 0 / 2250 & 0 / 2250 & 0.00 \\
+IFOCUS-HS & 0 / 2250 & 0 / 2250 & 0.00 \\
+CLT (uncert.) & 5 / 2250 & 16 / 2250 & 0.13 \\
+CLT+P (uncert.) & 3 / 2250 & 3 / 2250 & 0.07 \\
+\bottomrule
+\end{tabular}
+\end{table}

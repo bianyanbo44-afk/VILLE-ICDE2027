@@ -1,0 +1,14 @@
+{
+  "live_runs_checked": 12,
+  "all_judgments_match_exact": true,
+  "all_answers_r_correct": true,
+  "actual_call_accounting": true,
+  "main_replay_results_preserved": true,
+  "pdf_sha256": "0a79220319b3e1280e524bbdbe632cdf3355442c2cb90c9f81f23b003edb04f4",
+  "pdf_pages": 12,
+  "main_text_last_page": 11,
+  "embedded_fonts": true,
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "artifact_reproduction": true
+}

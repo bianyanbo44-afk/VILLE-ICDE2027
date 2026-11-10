@@ -1,0 +1,177 @@
+{
+  "kind": "topk",
+  "method": "WSR",
+  "calls": 19700,
+  "seconds": 378.3894296999997,
+  "llm_seconds": 378.2644152000066,
+  "answer": [
+    2,
+    4,
+    6,
+    9,
+    10
+  ],
+  "per_group_calls": [
+    700,
+    300,
+    2000,
+    1500,
+    2000,
+    300,
+    500,
+    300,
+    2000,
+    1500,
+    2000,
+    400,
+    2000,
+    2000,
+    200,
+    2000
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "calls": 1600,
+      "seconds": 29.07961140000043,
+      "active": 16
+    },
+    {
+      "round": 2,
+      "calls": 3200,
+      "seconds": 58.78919990000031,
+      "active": 13
+    },
+    {
+      "round": 3,
+      "calls": 4500,
+      "seconds": 84.08774809999977,
+      "active": 14
+    },
+    {
+      "round": 4,
+      "calls": 5900,
+      "seconds": 109.5415579999999,
+      "active": 10
+    },
+    {
+      "round": 5,
+      "calls": 6900,
+      "seconds": 128.17807129999983,
+      "active": 10
+    },
+    {
+      "round": 6,
+      "calls": 7900,
+      "seconds": 147.87234739999985,
+      "active": 10
+    },
+    {
+      "round": 7,
+      "calls": 8900,
+      "seconds": 167.7624539999997,
+      "active": 9
+    },
+    {
+      "round": 8,
+      "calls": 9800,
+      "seconds": 185.60141480000038,
+      "active": 9
+    },
+    {
+      "round": 9,
+      "calls": 10700,
+      "seconds": 203.7828945000001,
+      "active": 9
+    },
+    {
+      "round": 10,
+      "calls": 11600,
+      "seconds": 220.8651490000002,
+      "active": 9
+    },
+    {
+      "round": 11,
+      "calls": 12500,
+      "seconds": 238.4573362000001,
+      "active": 9
+    },
+    {
+      "round": 12,
+      "calls": 13400,
+      "seconds": 256.6727149999997,
+      "active": 9
+    },
+    {
+      "round": 13,
+      "calls": 14300,
+      "seconds": 274.33311760000015,
+      "active": 8
+    },
+    {
+      "round": 14,
+      "calls": 15100,
+      "seconds": 290.0467385000002,
+      "active": 7
+    },
+    {
+      "round": 15,
+      "calls": 15800,
+      "seconds": 303.3127207999996,
+      "active": 10
+    },
+    {
+      "round": 16,
+      "calls": 16800,
+      "seconds": 323.18992439999965,
+      "active": 8
+    },
+    {
+      "round": 17,
+      "calls": 17600,
+      "seconds": 338.68227709999974,
+      "active": 7
+    },
+    {
+      "round": 18,
+      "calls": 18300,
+      "seconds": 352.22641939999994,
+      "active": 7
+    },
+    {
+      "round": 19,
+      "calls": 19000,
+      "seconds": 365.6040382000001,
+      "active": 7
+    },
+    {
+      "round": 20,
+      "calls": 19700,
+      "seconds": 378.3893635000004,
+      "active": 0
+    }
+  ],
+  "wrong": false,
+  "live_labels_match_exact": true,
+  "full_means": [
+    0.1205,
+    0.031,
+    0.2585,
+    0.152,
+    0.209,
+    0.0365,
+    0.4095,
+    0.015,
+    0.1985,
+    0.293,
+    0.2195,
+    0.077,
+    0.1835,
+    0.1775,
+    0.0025,
+    0.198
+  ],
+  "fraction": 0.615625,
+  "exact_seconds": 570.3198412000006,
+  "speedup_vs_exact": 1.5072298442696193
+}

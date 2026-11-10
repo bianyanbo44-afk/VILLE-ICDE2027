@@ -1,0 +1,41 @@
+\section{Introduction}
+\label{sec:intro}
+
+Large language models have turned free text into a queryable attribute.
+Systems with semantic operators let an analyst filter, rank, and aggregate records by natural-language criteria that an LLM evaluates tuple by tuple~\cite{lotus,docetl,uqe,thalamusdb}.
+Many of the questions asked this way are \emph{decisions over groups}.
+A product manager asks which product lines have more than 20\% of reviews reporting a defect (a HAVING query).
+A support lead ranks stores by LLM-judged service quality (ORDER BY).
+A dashboard shows the five categories with the most negative reviews (Top-$k$).
+Evaluating such a query exactly issues one LLM call per tuple.
+For the 6.8 million reviews in our evaluation, that is 6.8 million calls and about 860 million input tokens with our prompts, for a single attribute and before the first answer is shown.
+
+Sampling is the natural remedy, and decision queries are where a sampled answer most needs a guarantee.
+An estimate that is off by a percentage point is harmless, but a group placed on the wrong side of a threshold or a swapped pair in a ranking is a wrong answer, and nothing in the sample reveals it.
+The common practice of sampling until normal-approximation intervals separate provides no such guarantee: the intervals are valid at one pre-planned sample size, and checking them after every batch, as analysts and agents do, inflates the error rate by an amount that depends on the data~\cite{johari2022,ramdas2023savi}.
+Certified alternatives exist, but they are expensive.
+Range-based bounds with a union bound over checks, as in IFOCUS~\cite{ifocus}, pay for the worst case.
+Evergreen uses confidence sequences to stop as soon as a threshold claim is confirmed or refuted, including under sampling without replacement~\cite{evergreen,wsr2024betting}.
+Its confidence-sequence construction provides an anytime-valid starting point for group decisions.
+\sys{} combines proxy rectification with boundary-specific, gap-adaptive bets and direct paired tests, and shares each judged prefix across the comparisons required by the query.
+
+Proxies are the standard lever for expensive predicates.
+BlazeIt and ABae use them to reduce the variance of aggregate estimates~\cite{blazeit,abae}, SUPG to select records with precision or recall targets~\cite{supg}, and LOTUS and BARGAIN to route tuples between cheap and expensive models~\cite{lotus,bargain}.
+These methods certify estimates, selections, or tuple-level outputs, mostly at a fixed sample size.
+A proxy cannot replace the LLM, however: in our evaluation, answers computed from proxy scores alone were wrong for \numNPROXYWRONG{} of \numNPROXYQ{} queries.
+What remains open is how few LLM calls suffice to certify a group-level \emph{decision} when the answer is monitored continuously and a proxy of unknown quality is available.
+
+We answer this question with \sys{}, a decision layer for HAVING, ORDER BY, and Top-$k$ queries over LLM-evaluated attributes.
+\sys{} rests on three observations.
+First, a decision depends on a few boundary hypotheses, such as ``the mean exceeds the threshold'' or ``group $i$ beats group $j$'', which let \sys{} adapt each bet to the gap relevant to that comparison.
+Second, each boundary hypothesis can be tested by betting: the bettor's wealth is a nonnegative supermartingale under the null, and Ville's inequality~\cite{ville1939} bounds the error at every stopping time.
+Third, the bets can be placed on proxy-rectified values $y-\beta(p-\bar p_g)$, which have exactly the group mean of the LLM judgments for any proxy, and far smaller variance when the proxy is informative.
+\sys{} realizes these observations for sampling without replacement, pairs groups of very different sizes with an exactly unbiased per-draw statistic, and stops each group as soon as its decisions are certified.
+
+This paper makes the following contributions.
+\begin{itemize}
+\item We define certified decision queries over LLM-evaluated attributes, with an indifference margin that makes certification possible and guarantees termination (\Cref{sec:problem}).
+\item We design proxy-rectified boundary e-processes for single groups and for pairs under sampling without replacement, and prove that \sys{} returns an incorrect answer with probability at most $\alpha$ under any stopping rule and any proxy (\Cref{sec:method}).
+\item We compile HAVING, ORDER BY, and Top-$k$ queries into these tests with per-group adaptive stopping (\Cref{sec:processing}).
+\item We evaluate \sys{} on \numNQ{} queries over three datasets, two of them judged by a real LLM. \sys{} never returned an incorrect answer, used \numRWSR$\times$ fewer LLM calls than Evergreen-style confidence sequences (up to \numRWSRMAX$\times$) and \numRHS--\numRBSP$\times$ fewer than IFOCUS- and BlazeIt-style bounds, and needed about as many calls as uncertified sampling, which erred in up to 13\% of executions. With two LLMs in the loop, latency followed the number of calls, and HAVING queries ran \numLiveHavingMin$\times$ and \numLiveHavingMax$\times$ faster than full evaluation (\Cref{sec:exp}).
+\end{itemize}

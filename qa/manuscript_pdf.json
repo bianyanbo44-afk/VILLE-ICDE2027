@@ -1,0 +1,13 @@
+{
+  "pdf": "main.pdf",
+  "pages": 12,
+  "body_pages": 11,
+  "acknowledgment_and_references_page": 12,
+  "fonts": 38,
+  "all_fonts_embedded": true,
+  "overfull": false,
+  "undefined_references": false,
+  "placeholders": false,
+  "authors_and_correspondence": true,
+  "public_artifact_link": "https://github.com/bianyanbo44-afk/VILLE-ICDE2027/releases/tag/v2026.11.10"
+}

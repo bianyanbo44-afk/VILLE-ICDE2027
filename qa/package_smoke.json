@@ -1,0 +1,366 @@
+{
+  "pass": true,
+  "configurations": 72,
+  "checks": [
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|having",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|order",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "prod-Video_Games|DEFECT|topk",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|having",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|order",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "CLT",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "CLT-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "HS",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "BS-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "WSR",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "WSR-P",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "BET",
+      "matches_first_supplied_run": true
+    },
+    {
+      "query": "year|SOTA|topk",
+      "method": "BET-P",
+      "matches_first_supplied_run": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+\begin{abstract}
+LLM-powered analytics answers group-level decision queries, such as HAVING thresholds, rankings, and top-$k$ selections over LLM-judged attributes, with one model call per tuple.
+Sampling reduces this cost, but a sampled decision needs a guarantee that survives continuous monitoring.
+Confidence sequences support threshold stopping, and cheap proxies improve aggregate estimation. Combining proxy information with variance-adaptive tests and shared samples across group decisions offers further reductions in model calls.
+We present \sys{}, a decision layer that compiles HAVING, ORDER BY, and Top-$k$ queries into a handful of boundary hypotheses and tests each with a betting e-process, which stays valid at any stopping time by Ville's inequality.
+It bets on proxy-rectified values, which keep every group mean exact for any proxy while removing the variance that the proxy explains.
+Finite-population and paired forms of the tests handle sampling without replacement and groups of very different sizes.
+We prove that \sys{} returns an incorrect answer with probability at most $\alpha$ under any stopping rule and any proxy.
+On \numNQ{} queries over three datasets, including 122 thousand reviews and 309 thousand paper abstracts judged by a real LLM, \sys{} returned no incorrect answer in \numNEXEC{} executions.
+It used \numRWSR$\times$ fewer LLM calls than Evergreen-style confidence sequences (up to \numRWSRMAX$\times$ on large groups) and \numRHS--\numRBSP$\times$ fewer than IFOCUS- and BlazeIt-style bounds, and about as many as uncertified normal-approximation stopping, which returned wrong answers in up to 13\% of a query's executions.
+With two LLMs in the loop, latency followed the number of calls, and HAVING queries ran \numLiveHavingMin$\times$ and \numLiveHavingMax$\times$ faster than full evaluation.
+\end{abstract}

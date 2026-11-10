@@ -1,0 +1,2160 @@
+{
+  "pass": true,
+  "totals": {
+    "rounds": 7755931,
+    "executions": 22270,
+    "charged_calls": 3633622148,
+    "queries": 136
+  },
+  "errors": {
+    "CLT": {
+      "answer_err": 5,
+      "decision_err": 16
+    },
+    "CLT-P": {
+      "answer_err": 3,
+      "decision_err": 3
+    },
+    "HS": {
+      "answer_err": 0,
+      "decision_err": 0
+    },
+    "BS-P": {
+      "answer_err": 0,
+      "decision_err": 0
+    },
+    "WSR": {
+      "answer_err": 0,
+      "decision_err": 0
+    },
+    "WSR-P": {
+      "answer_err": 0,
+      "decision_err": 0
+    },
+    "BET": {
+      "answer_err": 0,
+      "decision_err": 0
+    },
+    "BET-P": {
+      "answer_err": 0,
+      "decision_err": 0
+    }
+  },
+  "queries": [
+    {
+      "source": "d1_main",
+      "query": "cat|NEG|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/025f6d35be1d7942.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|NEG|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/6cb4168867b4a3d8.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|NEG|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/23fcce4f66fb3929.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|POS|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/6a0e22f57893b03e.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|POS|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/e6d538ef36650042.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|POS|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/53f44ee7b1ca9bfd.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|RAT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/943f319d03abd429.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|RAT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/afa6a2a273775ac5.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "cat|RAT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_main_runs/3549e79d9163408d.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|NEG|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/b0da11b2d6e06c22.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|NEG|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/85bfe28dfbd7d327.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|NEG|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/aec8d6f3166c04d3.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|POS|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/aa64c9dfe6ff2cac.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|POS|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/36e96ffe92a12a06.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|POS|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/801b6b33ae37edc1.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|RAT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/e20fcb359cf09907.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|RAT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/1c2b06d8b3606f7c.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Amazon_Fashion|RAT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Amazon_Fashion_runs/c90427e9abdc6c86.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|NEG|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/39dac3b9154752d7.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|NEG|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/3c14bf16555f8ee6.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|NEG|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/d7f70513f319d2ad.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|POS|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/dbf050f75348aee7.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|POS|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/6a53539859d19694.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|POS|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/92dd6f50490faa19.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|RAT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/3201ac74405be221.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|RAT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/6809526a0985a507.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "prod-Appliances|RAT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_prod-Appliances_runs/18d6c0098b7cee5b.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|NEG|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_runs/5c8e3ed4fdf490dc.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|NEG|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_runs/8b575c1ead6d67fe.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|NEG|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_runs/8a8425790ae606f8.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|POS|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_POS_runs/13f24af54a42b315.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|POS|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_POS_runs/007c2d719872aa4e.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|POS|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_POS_runs/7223928296edcf66.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|RAT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_RAT_runs/a5e1ae0d6e973059.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|RAT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_RAT_runs/edcacff24da0e424.json",
+      "pass": true
+    },
+    {
+      "source": "d1_main",
+      "query": "year|RAT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d1_year_RAT_runs/7125b699068b9189.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|DEFECT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/10a35f6a17a864ed.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|DEFECT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/13b6edd7e897afff.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|DEFECT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/c24baf2179fcba3e.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|VALUE|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/db0b751d7801b5b1.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|VALUE|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/509e7d53deffc17a.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|VALUE|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/02955fcd72e7e24c.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|SENT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/0c0016ab1ae834b4.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|SENT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/e98e4ac854871647.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Video_Games|SENT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/c587ede369eaf0f0.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|DEFECT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/11c79c9c594b8d6c.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|DEFECT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/f41bed4bde1fb362.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|DEFECT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/2ba8344b70d8f12b.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|VALUE|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/0802ceee5a6d2f74.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|VALUE|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/f78fd8452ac84a94.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|VALUE|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/17e06e091a919f4f.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|SENT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/b1939daae801ab96.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|SENT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/a7d337fdc800415e.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "prod-Musical_Instruments|SENT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/9041ec60043e7b8f.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|DEFECT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/69d4a11b5eaefc43.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|DEFECT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/89b2e2d7efff35a5.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|DEFECT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/2144e45409cae9b2.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|VALUE|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/7a73d8e985a5295b.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|VALUE|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/0e6f708d4a9649b9.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|VALUE|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/7e33da8111e528eb.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|SENT|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/03b4fb4ac97d3158.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|SENT|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/864a10b8287d9d39.json",
+      "pass": true
+    },
+    {
+      "source": "d2_wor",
+      "query": "year|SENT|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d2_wor_runs/59ecd9701c75fabd.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "year|SOTA|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/e2ad06afd67fff23.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "year|SOTA|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/277ab22615681e32.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "year|SOTA|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/5d9d44acfddb3b18.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "area|SOTA|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/7cf4c0204da8be90.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "area|SOTA|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/019c79c3768f88b7.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "area|SOTA|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/eb99e17949a4d9c3.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "year|EMP|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/7596a53349a81d9e.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "year|EMP|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/eb12c09e05badc8f.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "year|EMP|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/34373e65ba14e22d.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "area|EMP|having",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/1cd5e98208d2cc5c.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "area|EMP|order",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/5639a5810eba145b.json",
+      "pass": true
+    },
+    {
+      "source": "d3_arxiv",
+      "query": "area|EMP|topk",
+      "methods": {
+        "CLT": 30,
+        "CLT-P": 30,
+        "HS": 30,
+        "BS-P": 30,
+        "WSR": 30,
+        "WSR-P": 30,
+        "BET": 30,
+        "BET-P": 30
+      },
+      "execution_record": "d3_arxiv_runs/5051272f812afb5f.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy100|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/2b85a47558f2ed03.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy100|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/1eba6dd302e2aae8.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy100|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/2bfcb3720e77c8a5.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy100|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/645b8f124b0de8f6.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy300|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/4c2365d6510b0f7f.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy300|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/286f271c4fdcd213.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy300|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/31eb65ef1d2f8078.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy300|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/4996cf30989a12d6.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy1000|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/e08d686ee68efaf2.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy1000|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/1c80befb8426e074.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy1000|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/0e32ec948e289eb3.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy1000|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/84af351b2d0ff360.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy5000|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/d5ee2deb2116e17e.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy5000|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/d76c19e0567ae0cb.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy5000|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/2368735f5a350729.json",
+      "pass": true
+    },
+    {
+      "source": "abl_proxy",
+      "query": "proxy5000|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_proxy_runs/d7d25a7e4da9bfaf.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.025|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/d64fd18760d28000.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.025|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/4bd6960e44e4d672.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.025|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/30381dca1052924b.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.025|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/ab7357c03c5dd892.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.05|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/f6e3b47e7e5c6f67.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.05|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/0ff8379530d5b6e3.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.05|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/556ccf76c5acbb25.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.05|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/2bec48ce8dbeef2b.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.1|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/d5dfbee48f39bebe.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.1|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/22bb87570177e6f5.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.1|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/33811f24142a8744.json",
+      "pass": true
+    },
+    {
+      "source": "abl_margin",
+      "query": "r0.1|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_margin_runs/ab89177e3bf4f274.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.01|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/4a169c1f53551755.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.01|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/f9043096c96310de.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.01|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/4312fdbcf9ca0750.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.01|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/03a6d562f0ad632b.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.05|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/bcff8855125425a5.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.05|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/340c74fe9ece8f63.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.05|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/58088664455d14e1.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.05|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/908ec85c1610f034.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.1|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/ab89044666cf92d7.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.1|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/e12bddee0be01c1c.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.1|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/5da7e9f5c1efb351.json",
+      "pass": true
+    },
+    {
+      "source": "abl_alpha",
+      "query": "alpha0.1|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_alpha_runs/31bc7f25e401a451.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K5|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/7e0ab4bb1c1760b1.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K5|prod|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/bd2099f8914fb405.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K5|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/2abe8f0ce5fc5284.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K10|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/7e036c02ca3c2613.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K10|prod|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/1bf73a1f252fad1c.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K10|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/d0c788bcf95b4624.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K20|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/11b16b2384df96e8.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K20|prod|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/51e01cd2a719c07d.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K20|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/a4cdf55b5db3c47f.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K30|prod|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/a5906ddf7d84a723.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K30|prod|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/62210cfdc016b237.json",
+      "pass": true
+    },
+    {
+      "source": "abl_groups",
+      "query": "K30|prod|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_groups_runs/24a37b4ccaf74393.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-inverted|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/775d05e8af343065.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-inverted|year|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/c8552405cd61e1d3.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-inverted|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/ecf0540091f3f9f4.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-random|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/b28151f49d59eaba.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-random|year|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/68570f956e48882f.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-random|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/889ca5c4e9ae0622.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-shuffled|year|NEG|having",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/02390a2136ceba60.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-shuffled|year|NEG|order",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/b9bb75fab301ea4a.json",
+      "pass": true
+    },
+    {
+      "source": "abl_bad",
+      "query": "bad-shuffled|year|NEG|topk",
+      "methods": {
+        "CLT-P": 10,
+        "HS": 10,
+        "BS-P": 10,
+        "WSR": 10,
+        "WSR-P": 10,
+        "BET": 10,
+        "BET-P": 10
+      },
+      "execution_record": "abl_bad_runs/8162ad41c0eaa8a7.json",
+      "pass": true
+    }
+  ]
+}

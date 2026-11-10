@@ -1,0 +1,50 @@
+{
+ "cat|NEG|having": {
+  "cost": 0.009179625277489549,
+  "err": 0.0
+ },
+ "cat|POS|having": {
+  "cost": 0.004496471257093457,
+  "err": 0.0
+ },
+ "cat|RAT|having": {
+  "cost": 0.002033526079630776,
+  "err": 0.0
+ },
+ "year|NEG|having": {
+  "cost": 0.08886783276495457,
+  "err": 0.0
+ },
+ "year|POS|having": {
+  "cost": 0.034687980822410064,
+  "err": 0.0
+ },
+ "year|RAT|having": {
+  "cost": 0.0063851167668718374,
+  "err": 0.0
+ },
+ "prod-Amazon_Fashion|NEG|having": {
+  "cost": 0.307664300018205,
+  "err": 0.0
+ },
+ "prod-Amazon_Fashion|POS|having": {
+  "cost": 0.40597123611869645,
+  "err": 0.0
+ },
+ "prod-Amazon_Fashion|RAT|having": {
+  "cost": 0.1879665028217731,
+  "err": 0.0
+ },
+ "prod-Appliances|NEG|having": {
+  "cost": 0.30819728199092655,
+  "err": 0.0
+ },
+ "prod-Appliances|POS|having": {
+  "cost": 0.30445322952188386,
+  "err": 0.0
+ },
+ "prod-Appliances|RAT|having": {
+  "cost": 0.1727575419219201,
+  "err": 0.0
+ }
+}

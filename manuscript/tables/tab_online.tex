@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Live execution over the same 32,000 reviews in 16 product groups with two model families.
+CS denotes the Evergreen-style confidence-sequence baseline. Calls count fresh model evaluations by each method.
+Latencies include prompt processing, model inference and certificate updates, with the model
+resident and proxies prepared. Each model's complete exact scan is measured once and supplies the shared reference
+latency for the three queries over the same predicate. The SQL aggregation time is added per query.
+Speedup is measured exact-query latency divided by VILLE latency.}
+\label{tab:online}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{llrrrrrr}
+\toprule
+& & \multicolumn{2}{c}{LLM calls} & \multicolumn{3}{c}{Measured latency (s)} & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-7}
+Model & Query & \sys{} & CS & \sys{} & CS & Exact & Speedup \\
+\midrule
+Qwen2.5-1.5B & HAVING & 12,400 & 15,100 & 229.3 & 280.0 & 570.3 & 2.49$\times$ \\
+ & ORDER BY & 26,400 & 30,000 & 484.8 & 558.0 & 570.3 & 1.18$\times$ \\
+ & Top-5 & 16,500 & 19,700 & 312.3 & 378.4 & 570.3 & 1.83$\times$ \\
+\midrule
+SmolLM2-1.7B & HAVING & 1,900 & 2,000 & 44.6 & 47.9 & 712.8 & 15.97$\times$ \\
+ & ORDER BY & 32,000 & 31,500 & 709.2 & 699.6 & 712.8 & 1.00$\times$ \\
+ & Top-5 & 23,700 & 25,400 & 515.5 & 556.1 & 712.7 & 1.38$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

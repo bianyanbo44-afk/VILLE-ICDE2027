@@ -1,0 +1,32 @@
+[
+  {
+    "file": "sem1_amazon.npz",
+    "arrays": [
+      "cat",
+      "rating",
+      "year",
+      "asin",
+      "train",
+      "p_neg",
+      "p_pos",
+      "p_rat",
+      "cats",
+      "beta"
+    ],
+    "all_identical": true,
+    "source_array_count": 10
+  },
+  {
+    "file": "proxy_sweep.npz",
+    "arrays": [
+      "p_neg_100",
+      "p_neg_300",
+      "p_neg_1000",
+      "beta_neg_100",
+      "beta_neg_300",
+      "beta_neg_1000"
+    ],
+    "all_identical": true,
+    "source_array_count": 9
+  }
+]

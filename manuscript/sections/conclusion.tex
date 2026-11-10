@@ -1,0 +1,10 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Decision queries over LLM-evaluated attributes ask for discrete answers, and discrete answers can be certified far more cheaply than precise estimates.
+\sys{} compiles HAVING, ORDER BY, and Top-$k$ queries into boundary hypotheses, tests each with a betting e-process on proxy-rectified values, and stops each group as soon as its decisions are certified.
+The answer is $r$-correct with probability at least $1-\alpha$ under any stopping rule and any proxy.
+On \numNQ{} queries over 6.8 million reviews and over 431 thousand reviews and paper abstracts judged by a real LLM, \sys{} returned no incorrect answer and needed \numRWSR$\times$ fewer LLM calls than Evergreen-style confidence sequences and \numRHS--\numRBSP$\times$ fewer than IFOCUS- and BlazeIt-style bounds, about as many as uncertified sampling.
+The savings are largest where they matter most, on large groups, where \sys{} judged up to \numRWSRMAX$\times$ fewer tuples than an Evergreen-style confidence sequence.
+With Qwen2.5 and SmolLM2 in the loop, latency followed the number of calls, and HAVING queries ran \numLiveHavingMin$\times$ and \numLiveHavingMax$\times$ faster than full evaluation.
+The same construction applies wherever a per-tuple evaluation is expensive and a cheap correlate exists, such as vision models over images or human labels over records.

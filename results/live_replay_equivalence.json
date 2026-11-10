@@ -1,0 +1,86 @@
+[
+  {
+    "model": "live_qwen_20261109",
+    "kind": "having",
+    "method": "BET-P",
+    "calls": 12400,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_qwen_20261109",
+    "kind": "having",
+    "method": "WSR",
+    "calls": 15100,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_qwen_20261109",
+    "kind": "order",
+    "method": "BET-P",
+    "calls": 26400,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_qwen_20261109",
+    "kind": "order",
+    "method": "WSR",
+    "calls": 30000,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_qwen_20261109",
+    "kind": "topk",
+    "method": "BET-P",
+    "calls": 16500,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_qwen_20261109",
+    "kind": "topk",
+    "method": "WSR",
+    "calls": 19700,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_smol_20261109",
+    "kind": "having",
+    "method": "BET-P",
+    "calls": 1900,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_smol_20261109",
+    "kind": "having",
+    "method": "WSR",
+    "calls": 2000,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_smol_20261109",
+    "kind": "order",
+    "method": "BET-P",
+    "calls": 32000,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_smol_20261109",
+    "kind": "order",
+    "method": "WSR",
+    "calls": 31500,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_smol_20261109",
+    "kind": "topk",
+    "method": "BET-P",
+    "calls": 23700,
+    "same_answer_and_prefixes": true
+  },
+  {
+    "model": "live_smol_20261109",
+    "kind": "topk",
+    "method": "WSR",
+    "calls": 25400,
+    "same_answer_and_prefixes": true
+  }
+]

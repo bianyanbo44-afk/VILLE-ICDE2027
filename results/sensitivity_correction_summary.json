@@ -1,0 +1,165 @@
+{
+  "proxy": {
+    "proxy100": {
+      "ville": 0.0949613419423956,
+      "wsr": 0.19860338431451177,
+      "noproxy": 0.10066083560790712,
+      "max_vs_noproxy": 0.9853712112821646,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.0914129924047025,
+      "saving_vs_noproxy": 0.056620766468819306
+    },
+    "proxy1000": {
+      "ville": 0.07700963182853983,
+      "wsr": 0.1854037666165992,
+      "noproxy": 0.09564531989510189,
+      "max_vs_noproxy": 0.9022633552889369,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.407539968888521,
+      "saving_vs_noproxy": 0.1948416094692409
+    },
+    "proxy300": {
+      "ville": 0.09052358377700769,
+      "wsr": 0.1849400791128829,
+      "noproxy": 0.09991959309804095,
+      "max_vs_noproxy": 0.9490162663162341,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.043004390639871,
+      "saving_vs_noproxy": 0.09403570440698172
+    },
+    "proxy5000": {
+      "ville": 0.06449865363418064,
+      "wsr": 0.18747009890397395,
+      "noproxy": 0.09858874956560477,
+      "max_vs_noproxy": 0.8230506141539844,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.9065738328005253,
+      "saving_vs_noproxy": 0.34578079224688074
+    }
+  },
+  "margin": {
+    "r0.025": {
+      "ville": 0.08080745669322473,
+      "wsr": 0.21687502872575612,
+      "noproxy": 0.12355355282072289,
+      "max_vs_noproxy": 0.8071074004077026,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.6838492089794967,
+      "saving_vs_noproxy": 0.3459722132759959
+    },
+    "r0.05": {
+      "ville": 0.06628282926489343,
+      "wsr": 0.1849400791128829,
+      "noproxy": 0.09991959309804095,
+      "max_vs_noproxy": 0.8071074004077026,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.7901657361937033,
+      "saving_vs_noproxy": 0.33663831877440875
+    },
+    "r0.1": {
+      "ville": 0.0509786712320053,
+      "wsr": 0.13742671091704672,
+      "noproxy": 0.07694357528212441,
+      "max_vs_noproxy": 0.8065641063741856,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.695768791061934,
+      "saving_vs_noproxy": 0.33745382840497273
+    }
+  },
+  "alpha": {
+    "alpha0.01": {
+      "ville": 0.07516413692765846,
+      "wsr": 0.21780715632757383,
+      "noproxy": 0.11744898106412359,
+      "max_vs_noproxy": 0.8181807960675584,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.897753705829175,
+      "saving_vs_noproxy": 0.3600273391335672
+    },
+    "alpha0.05": {
+      "ville": 0.06551119383196452,
+      "wsr": 0.1934529444957923,
+      "noproxy": 0.10480861328338623,
+      "max_vs_noproxy": 0.8102635518408771,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.952975410461866,
+      "saving_vs_noproxy": 0.37494456056934544
+    },
+    "alpha0.1": {
+      "ville": 0.06215206772070997,
+      "wsr": 0.1825974123287799,
+      "noproxy": 0.099580171217643,
+      "max_vs_noproxy": 0.801806294192118,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.937913717517974,
+      "saving_vs_noproxy": 0.3758589992291733
+    }
+  },
+  "groups": {
+    "K10": {
+      "ville": 0.22315701356223028,
+      "wsr": 0.4672918524437945,
+      "noproxy": 0.30628482043954747,
+      "max_vs_noproxy": 0.8141329870990912,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.094004777104996,
+      "saving_vs_noproxy": 0.27140687794459084
+    },
+    "K20": {
+      "ville": 0.5106092956138211,
+      "wsr": 0.6547980900486101,
+      "noproxy": 0.5758094081949641,
+      "max_vs_noproxy": 0.9611547898811169,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 1.28238576084177,
+      "saving_vs_noproxy": 0.11323210710559772
+    },
+    "K30": {
+      "ville": 0.4339451594945756,
+      "wsr": 0.5920453511019294,
+      "noproxy": 0.49304305675167953,
+      "max_vs_noproxy": 0.9625766253629874,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 1.3643321930160395,
+      "saving_vs_noproxy": 0.11986356251816865
+    },
+    "K5": {
+      "ville": 0.30979827089337175,
+      "wsr": 0.5287861843520152,
+      "noproxy": 0.39356531463718875,
+      "max_vs_noproxy": 0.787158469945355,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 1.7068726136758072,
+      "saving_vs_noproxy": 0.2128415300546449
+    }
+  },
+  "bad": {
+    "bad-inverted": {
+      "ville": 0.11470911430612238,
+      "wsr": 0.18370277641563273,
+      "noproxy": 0.06953997721408484,
+      "max_vs_noproxy": 1.7102248065189798,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 1.601466261219558,
+      "saving_vs_noproxy": -0.6495420174352438
+    },
+    "bad-random": {
+      "ville": 0.10152566474209175,
+      "wsr": 0.18370277641563273,
+      "noproxy": 0.06953997721408484,
+      "max_vs_noproxy": 1.547549240407846,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 1.8094220499052887,
+      "saving_vs_noproxy": -0.4599611447892227
+    },
+    "bad-shuffled": {
+      "ville": 0.07936569966078544,
+      "wsr": 0.18370277641563273,
+      "noproxy": 0.06953997721408484,
+      "max_vs_noproxy": 1.158299743495786,
+      "all_below_wsr": true,
+      "wsr_vs_ville": 2.3146368922694727,
+      "saving_vs_noproxy": -0.14129602626200555
+    }
+  }
+}
