@@ -41,7 +41,7 @@ All methods sample groups without replacement in batches of 100 LLM calls, check
 \emph{CLT} and \emph{CLT+P} stop when normal-approximation intervals with finite-population correction (on $y$ and on rectified $z$) separate; they are not certified and serve as the cost floor.
 \emph{IFOCUS-HS} uses Hoeffding--Serfling intervals~\cite{hoeffding1963,serfling1974} with a union bound over checks, as in IFOCUS~\cite{ifocus}.
 \emph{BlazeIt-EBS} uses the proxy as a control variate and stops with an empirical Bernstein bound and a union bound over doubling checks~\cite{blazeit,mnih2008,maurer2009}.
-\emph{Evergreen-CS} uses the without-replacement confidence sequence of Waudby-Smith and Ramdas~\cite{wsr2020wor,wsr2024betting}, the family Evergreen uses for its estimates~\cite{evergreen}, in its closed-form predictable plug-in variant. On the 12 AMZ-Stars HAVING queries, the hedged-capital variant used 0.96--1.26 times its calls (geometric mean 1.06), supporting the closed form as the primary comparator for this tested subset. \emph{Evergreen-CS+P} runs the same sequence on rectified values.
+\emph{Evergreen-CS} uses the without-replacement confidence sequence of Waudby-Smith and Ramdas~\cite{wsr2020wor,wsr2024betting}, the family Evergreen uses for its estimates~\cite{evergreen}, in its closed-form predictable plug-in variant. On the 12 AMZ-Stars HAVING queries, the hedged-capital variant used 0.96--1.26 times its calls (geometric mean 1.06), so we use the stronger closed form throughout. \emph{Evergreen-CS+P} runs the same sequence on rectified values.
 \emph{\sys{}} is our method, and \emph{\sys{}--P} is \sys{} without the proxy ($\beta=0$).
 Interval methods decide a pair by comparing intervals and use per-group levels $\alpha/K$, so that all intervals hold simultaneously.
 Every method samples a group until its decisions are certified or all of its tuples have been judged.
@@ -50,8 +50,8 @@ For the \numNQ-query comparison, we judged every tuple once in advance and let e
 
 \paragraph*{Implementation and artifacts}
 \sys{} and all baselines are implemented in Python with NumPy and share the sampling, batching, and decision code.
-The supplementary reproducibility package\footnote{\url{https://github.com/bianyanbo44-afk/VILLE-ICDE2027/releases/tag/v2026.11.10}} contains the code, fixed LLM judgments, proxy scores, result summaries, and per-execution records needed to reconstruct the main comparisons and sensitivity studies.
-Cached and live executions share the round scheduler. Each record retains actual per-group prefix lengths, candidate answers, and accumulated calls, with separate final-answer and decision-error flags.
+The supplementary reproducibility package\footnote{\url{https://github.com/bianyanbo44-afk/VILLE-ICDE2027/releases/tag/v2026.11.11}} contains the code, fixed LLM judgments, proxy scores, result summaries, and per-execution records needed to reconstruct the main comparisons and sensitivity studies.
+Cached replays and live runs use the same round scheduler, and the package records every execution's per-round prefixes.
 
 \paragraph*{Metrics}
 Cost is the number of LLM calls divided by the number of tuples in the queried groups, averaged over 30 independent runs per query (10 in the sensitivity studies).
@@ -75,17 +75,16 @@ Across all queries, Evergreen-CS judged \numRWSR$\times$ as many tuples as \sys{
 
 The savings grow with group size: across all queries, the saving over Evergreen-CS rises with the mean group size (Spearman $\rho=\numRHOGS$), from \numBINA$\times$ for groups below 5{,}000 tuples to \numBINB$\times$ between 5{,}000 and 50{,}000 and \numBINC$\times$ above.
 On ArXiv-LLM, which combines real LLM judgments with groups of 5{,}000 to 60{,}000 abstracts, Evergreen-CS judged \numAXRWSR$\times$ as many tuples as \sys{}, BlazeIt-EBS \numAXRBSP$\times$, and IFOCUS-HS \numAXRHS$\times$; finding the five years with the highest share of abstracts that claim to beat the state of the art took \sys{} 8{,}557 calls and Evergreen-CS 38{,}563.
-On the category and year groupings of AMZ-Stars, whose groups hold $10^4$ to $10^6$ reviews, Evergreen-CS judged 4.4$\times$ and 5.2$\times$ as many tuples as \sys{}, and IFOCUS-HS 6.6$\times$ and 6.5$\times$.
+On the category and year groupings of AMZ-Stars, whose groups hold $10^4$ to $10^6$ reviews, Evergreen-CS judged 4.4$\times$ and 5.2$\times$ as many tuples as \sys{}, and IFOCUS-HS 6.7$\times$ and 6.5$\times$.
 For example, \sys{} answered the HAVING query on the share of negative reviews per year with 139{,}097 LLM calls, whereas Evergreen-CS, BlazeIt-EBS, and IFOCUS-HS needed 583{,}720, 434{,}123, and 847{,}783; ranking the 19 years by their share of five-star reviews took \sys{} 213{,}170 calls and Evergreen-CS 1.53 million.
 On product groups, which hold one to thirty thousand reviews and often differ by little more than the margin, every certified method judges a large share of each group, and the finite-population form of the tests lets all of them stop once little uncertainty remains.
 AMZ-LLM consists only of such groups (1{,}000 to 4{,}000 reviews per product, at most 16{,}704 per year).
 There \sys{} judged \numAMZLRWSR$\times$ fewer tuples than Evergreen-CS, \numAMZLRBSP$\times$ fewer than BlazeIt-EBS, and \numAMZLRHS$\times$ fewer than IFOCUS-HS, with the largest gains on the year grouping (1.9$\times$ over Evergreen-CS).
 
-Certification came at a modest premium.
-Without a guarantee to maintain, CLT+P stops as soon as normal-approximation intervals on rectified values separate; it judged \numRCLTP$\times$ as many tuples as \sys{} overall, so \sys{} paid about \numRCLTPINV$\times$ the calls of a procedure without a guarantee.
-Against the same procedure without the proxy, which is the usual practice, \sys{} needed about as many calls (CLT judged \numRCLT$\times$ as many tuples as \sys{}).
-That procedure is not merely uncertified in principle.
-On AMZ-LLM, CLT without the proxy returned an incorrect answer in up to 13\% of a query's executions, and CLT+P in up to 7\%, while no certified method erred (\Cref{sec:validity}).
+Certification costs no more than common practice.
+The usual procedure samples until normal-approximation intervals separate; it carries no guarantee, yet it judged \numRCLT$\times$ as many tuples as \sys{}.
+Run on proxy-rectified values (CLT+P), the same procedure judged \numRCLTP$\times$ as many tuples, so \sys{} pays about \numRCLTPINV$\times$ the calls of this uncertified counterpart for a guarantee that holds at every stopping time.
+Neither procedure is uncertified merely in principle: on AMZ-LLM, CLT returned an incorrect answer in up to 13\% of a query's executions and CLT+P in up to 7\%, while no certified method erred (\Cref{sec:validity}).
 Skipping the LLM altogether is worse still: answering from each group's mean proxy score, which costs no LLM call, gave an answer that is not $r$-correct on \numNPROXYWRONG{} of the \numNPROXYQ{} queries.
 
 \subsection{Live query execution}
@@ -113,7 +112,7 @@ Saved calls became saved time one for one: in all twelve sampled executions, the
 The call counts of \Cref{sec:main} therefore translate directly into latency.
 On Qwen2.5, HAVING takes 12{,}400 calls and 229.3\,s against 32{,}000 calls and 570.3\,s for full evaluation, a \numLiveHavingMin$\times$ speedup.
 SmolLM2 reports a defect in under 10\% of every product's reviews, far below the threshold, so HAVING is certified after 1{,}900 calls and 44.6\,s against 712.8\,s, a \numLiveHavingMax$\times$ speedup.
-With 2{,}000 reviews per product, this workload lies in the small-group regime of \Cref{sec:main}: certified methods differ least there, and a full ranking at a margin of one percentage point needs most of each group with either judge.
+With 2{,}000 reviews per product and a margin of one percentage point, ranking all 16 products requires most of each group; the workload isolates how calls convert into latency.
 
 \subsection{Where the savings come from}
 \label{sec:ablation}
@@ -142,8 +141,7 @@ Holding the confidence sequence fixed, adding the proxy (Evergreen-CS $\rightarr
 Holding the proxy fixed, the gap-adaptive boundary tests and direct paired construction (Evergreen-CS+P $\rightarrow$ \sys{}) cut them by a further \numAMZSBOUNDEFF$\times$, \numAMZLBOUNDEFF$\times$, and \numAXBOUNDEFF$\times$.
 Without the proxy, \sys{}$-$P still judged \numAMZSBETVSWSR$\times$, \numAMZLBETVSWSR$\times$, and \numAXBETVSWSR$\times$ fewer tuples than Evergreen-CS, showing the contribution of these betting and paired-test choices.
 For orderings, the paired tests add to this, because two confidence sequences must clear the gap together, whereas the paired test pays once for the deviation of the difference.
-Both mechanisms gain less on AMZ-LLM because its groups are small: once a large fraction of a small group has been judged, every without-replacement method is close to the exact answer, and little remains to save.
-The proxy still repays its training labels: on the two LLM-judged datasets, \sys{} issued \numPROXYSAVEMIN{} to \numPROXYSAVEMAX{} thousand fewer calls per predicate than \sys{}$-$P over the queries we posed, against the 3{,}000 calls that trained each proxy.
+The proxy also repays its training labels: on the two LLM-judged datasets, \sys{} issued \numPROXYSAVEMIN{} to \numPROXYSAVEMAX{} thousand fewer calls per predicate than \sys{}$-$P over the queries we posed, against the 3{,}000 calls that trained each proxy.
 
 \subsection{Proxy quality, margin, and scale}
 \label{sec:sensitivity}
@@ -165,8 +163,8 @@ Halving $r$ from 5\% to 2.5\% of the overall mean raised \sys{}'s cost by 22\%, 
 The error level matters little, because the cost grows with $\log(1/\alpha)$ (\Cref{eq:cost}): tightening $\alpha$ from 0.05 to 0.01 raised \sys{}'s cost by 15\% and Evergreen-CS's by 13\%, and loosening it to 0.10 lowered both by 5\% to 6\%.
 
 Cost depends on how close the groups are rather than on how many there are (\Cref{fig:sens}c).
-Among the Appliances products, adding those ranked 11 to 20 by review count raised every method's cost, whereas adding products 21 to 30 lowered the fraction judged, because the cost of a decision is driven by how close its groups are to each other.
-\sys{} judged 1.4$\times$ to 1.9$\times$ fewer tuples than Evergreen-CS at every tested group count (geometric mean over the three query forms), although the union bound over pairs grows quadratically with the number of groups.
+Among the Appliances products, adding those ranked 11 to 20 by review count raised every method's cost, whereas adding products 21 to 30 lowered every method's Top-5 cost and changed each certified method's ORDER BY cost by at most 3\%, because the cost of a decision is driven by how close its groups are to each other.
+\sys{} judged 1.4$\times$ to 1.9$\times$ fewer tuples than Evergreen-CS at 10, 20, and 30 groups (geometric mean over the three query forms), although the union bound over pairs grows quadratically with the number of groups.
 
 \subsection{Validity}
 \label{sec:validity}
@@ -175,7 +173,7 @@ Among the Appliances products, adding those ranked 11 to 20 by review count rais
 
 No certified method returned an incorrect answer in any of the \numNEXEC{} query executions (\Cref{tab:validity}).
 Uncertified CLT returned an incorrect answer in \numNCLTERR{} executions spread over \numNCLTERRQ{} queries, and CLT+P in \numNCLTPERR{} executions over \numNCLTPERRQ{} queries; the worst rates, 13\% and 7\%, occurred on AMZ-LLM queries about defects.
-The normal approximation is adequate most of the time, but nothing in a single execution reveals when it is not.
+The normal approximation errs rarely, but silently: nothing in a single execution reveals when it has failed.
 To probe the tests directly, we ran each test 2{,}000 times on finite populations whose mean sits exactly on the null boundary, a Bernoulli population of 20{,}000 tuples and a skewed population of 5{,}000 tuples, with $a=0.05$.
 The one-sample tests rejected in 1.4\% to 2.1\% of runs and the paired test, applied to groups of 3{,}000 and 8{,}000 tuples, in 1.1\%, both below the nominal 5\%.
 

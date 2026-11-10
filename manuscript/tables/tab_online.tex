@@ -1,6 +1,6 @@
 \begin{table*}[t]
 \centering
-\caption{Live execution over the same 32,000 reviews in 16 product groups with two model families.
+\caption{Live execution with two model families over the same 32,000 reviews in 16 product groups: latency tracks the number of LLM calls, and certificate updates take at most \numLiveMaxOverhead\% of \sys{}'s latency.
 CS denotes the Evergreen-style confidence-sequence baseline. Calls count fresh model evaluations by each method.
 Latencies include prompt processing, model inference and certificate updates, with the model
 resident and proxies prepared. Each model's complete exact scan is measured once and supplies the shared reference

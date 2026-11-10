@@ -1,0 +1,16 @@
+{
+ "svg": "overview_mechanism.svg",
+ "verdict": "PASS",
+ "auditable": true,
+ "width_mm": 182.03333333333333,
+ "text_count": 226,
+ "minimum_found_pt": 3.7800000000000002,
+ "maximum_found_pt": 6.0,
+ "thresholds": {
+  "min_pt": 3.75,
+  "max_pt": 6.0,
+  "max_width_mm": 183.0
+ },
+ "findings": [],
+ "note": "Thresholds 3.75/6.0 equal 5/8 pt: matplotlib writes font-size in px meaning viewBox user units (1 unit = 1 pt here), which the audit reads as 0.75 pt."
+}

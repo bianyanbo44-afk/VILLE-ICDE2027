@@ -1,0 +1,44 @@
+{
+  "figure": "figures/overview_mechanism.pdf (Figure 1, full text width)",
+  "physical_size_pt": [516, 216],
+  "source": "make_overview_mechanism.py",
+  "checks": [
+    {
+      "check_id": "FONT-FAMILY",
+      "raw_result": "FAIL",
+      "resolution": "target_and_reference_override",
+      "reason": "The generic validator only whitelists sans-serif faces (a Nature rule). The target is an IEEE conference paper set in Times, and the user's reference figures use serif type. Times New Roman is used with STIX mathematics and both are embedded (pdf.fonttype 42)."
+    },
+    {
+      "check_id": "FONT-SIZE / FONT-GLYPH-FLOOR",
+      "raw_result": "WARN",
+      "resolution": "measured",
+      "reason": "Sizes are set through the constants CAP, LAB and SMALL (8.0, 7.5, 7.2 pt). The exported PDF has a smallest glyph run of 5.04 pt (mathtext subscripts), see pdf_text.json."
+    },
+    {
+      "check_id": "FINAL-WIDTH",
+      "raw_result": "WARN",
+      "resolution": "measured",
+      "reason": "Width is set by the constant W = 516 pt, the IEEE two-column text width; the PDF page is 516 x 216 pt and is placed at \\textwidth, so it prints at 1:1."
+    },
+    {
+      "check_id": "EXPORT-RASTER",
+      "raw_result": "WARN",
+      "resolution": "not_required",
+      "reason": "The vector PDF is the manuscript master; the 600 dpi PNG is a preview. IEEE does not require TIFF for initial submission."
+    },
+    {
+      "check_id": "LOG-GUARD",
+      "raw_result": "WARN",
+      "resolution": "false_positive",
+      "reason": "The only 'log(' in the source is the typeset axis label and threshold label; no logarithm is computed."
+    },
+    {
+      "check_id": "SVG text.small",
+      "raw_result": "FAIL at 5 pt floor",
+      "resolution": "unit_correction",
+      "reason": "Matplotlib writes font-size in px, which inside this SVG means viewBox user units (1 unit = 1 pt because width=516pt and viewBox width 516). The audit converts px as 0.75 pt, so it reports 0.75 x the true size. Rerun with the equivalent thresholds 3.75/6.0 pt passes with no findings (svg_audit.json); the PDF audit measures the true 5.04 pt minimum."
+    }
+  ],
+  "remaining_source_failures": []
+}

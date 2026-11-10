@@ -1,13 +1,20 @@
 {
   "pdf": "main.pdf",
   "pages": 12,
-  "body_pages": 11,
-  "acknowledgment_and_references_page": 12,
-  "fonts": 38,
+  "fonts": 36,
   "all_fonts_embedded": true,
   "overfull": false,
   "undefined_references": false,
-  "placeholders": false,
+  "manuscript_placeholders": false,
   "authors_and_correspondence": true,
-  "public_artifact_link": "https://github.com/bianyanbo44-afk/VILLE-ICDE2027/releases/tag/v2026.11.10"
+  "orcid_present_for_all_authors": true,
+  "ai_use_acknowledgment_present": true,
+  "public_artifact_link": "https://github.com/bianyanbo44-afk/VILLE-ICDE2027/releases/tag/v2026.11.11",
+  "all_generated_macros_match": true,
+  "figure1": "overview_mechanism.pdf",
+  "figure1_placement": "full text width on page 3",
+  "caption_matches_user_selected_version": true,
+  "sha256": "039c18536fed4dbd939c70985912e69f05753affd4c782da052d4c113a952591",
+  "regression_checks": 7,
+  "full_data_replay_basis": "Existing validated corrected snapshot. Scientific execution code and main summaries match the preceding checked release."
 }

@@ -16,8 +16,7 @@ The common practice of sampling until normal-approximation intervals separate pr
 Certified alternatives exist, but they are expensive.
 Range-based bounds with a union bound over checks, as in IFOCUS~\cite{ifocus}, pay for the worst case.
 Evergreen uses confidence sequences to stop as soon as a threshold claim is confirmed or refuted, including under sampling without replacement~\cite{evergreen,wsr2024betting}.
-Its confidence-sequence construction provides an anytime-valid starting point for group decisions.
-\sys{} combines proxy rectification with boundary-specific, gap-adaptive bets and direct paired tests, and shares each judged prefix across the comparisons required by the query.
+A confidence sequence, however, bounds each group's mean on its own: comparing two groups requires both intervals to clear the gap, and Evergreen's estimates do not use the proxy scores that LLM-powered systems already compute.
 
 Proxies are the standard lever for expensive predicates.
 BlazeIt and ABae use them to reduce the variance of aggregate estimates~\cite{blazeit,abae}, SUPG to select records with precision or recall targets~\cite{supg}, and LOTUS and BARGAIN to route tuples between cheap and expensive models~\cite{lotus,bargain}.
@@ -34,7 +33,7 @@ Third, the bets can be placed on proxy-rectified values $y-\beta(p-\bar p_g)$, w
 
 This paper makes the following contributions.
 \begin{itemize}
-\item We define certified decision queries over LLM-evaluated attributes, with an indifference margin that makes certification possible and guarantees termination (\Cref{sec:problem}).
+\item We define certified decision queries over LLM-evaluated attributes, with an indifference margin that makes certification possible before every tuple is judged (\Cref{sec:problem}).
 \item We design proxy-rectified boundary e-processes for single groups and for pairs under sampling without replacement, and prove that \sys{} returns an incorrect answer with probability at most $\alpha$ under any stopping rule and any proxy (\Cref{sec:method}).
 \item We compile HAVING, ORDER BY, and Top-$k$ queries into these tests with per-group adaptive stopping (\Cref{sec:processing}).
 \item We evaluate \sys{} on \numNQ{} queries over three datasets, two of them judged by a real LLM. \sys{} never returned an incorrect answer, used \numRWSR$\times$ fewer LLM calls than Evergreen-style confidence sequences (up to \numRWSRMAX$\times$) and \numRHS--\numRBSP$\times$ fewer than IFOCUS- and BlazeIt-style bounds, and needed about as many calls as uncertified sampling, which erred in up to 13\% of executions. With two LLMs in the loop, latency followed the number of calls, and HAVING queries ran \numLiveHavingMin$\times$ and \numLiveHavingMax$\times$ faster than full evaluation (\Cref{sec:exp}).
