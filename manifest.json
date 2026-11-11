@@ -7,8 +7,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6034,
-      "sha256": "c899ed80690cb1da4f586118d91c65354840f2df619ab2e08e019dc96059365a"
+      "bytes": 5881,
+      "sha256": "04b3ae71b5f6933e619cee89f8aa3c3a1af83a565aa0b235f936fd4facb74a8e"
     },
     {
       "path": "SEM1_PROTOCOL.md",
@@ -142,13 +142,13 @@
     },
     {
       "path": "manuscript/main.pdf",
-      "bytes": 527474,
-      "sha256": "ab6930300debc14269cb8877323f45e055544de296733782da8576d596123bbb"
+      "bytes": 527709,
+      "sha256": "039c18536fed4dbd939c70985912e69f05753affd4c782da052d4c113a952591"
     },
     {
       "path": "manuscript/main.tex",
-      "bytes": 2188,
-      "sha256": "ebb2df7be9a02321250d406ef72ce0cdb73b5f6b555079fb53d68d4a1de598af"
+      "bytes": 2426,
+      "sha256": "cd4254d6a9d93eebbe816527868f6a903cbee97adb0a4fb8e738954e26ae7997"
     },
     {
       "path": "manuscript/numbers_auto.tex",
@@ -317,8 +317,8 @@
     },
     {
       "path": "qa/manuscript_pdf.json",
-      "bytes": 1066,
-      "sha256": "cb92ed749a48c38209a3763ad9fa6e35ed5a711ea1b410358f602a3bbbac8d01"
+      "bytes": 852,
+      "sha256": "662a1f58f14da0f6f3ca99fa0dcdfe53e5907b93cee82d2beb1f5592a9ffac09"
     },
     {
       "path": "qa/overview_mechanism/alignment.json",
@@ -367,8 +367,8 @@
     },
     {
       "path": "qa/visual_review.md",
-      "bytes": 1927,
-      "sha256": "6e19828f793135a87b953c0558d7f6c721938a61890d5b389ce8967f63c9befb"
+      "bytes": 1588,
+      "sha256": "f3190dc2bfaa6e4b75151bacaca2018a6077f2dc289a5e3d663140b22d061169"
     },
     {
       "path": "requirements-cached.txt",

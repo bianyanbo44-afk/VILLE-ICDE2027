@@ -7,5 +7,3 @@ Figure 1 uses Times New Roman and STIX mathematics, fine gray structure and mute
 The main scatter, decomposition and sensitivity PDFs retain their audited numeric geometry. All three have zero collision FAIL and zero WARN, with a minimum standalone glyph size of 5.04 pt. Panel alignment is measured for the comparable multi-panel figures. Each main-comparison point is a query mean over 30 sampling runs, and the sensitivity summaries use ten runs per query. The manuscript states the aggregation and reports cost variability.
 
 The current public release reference in the paper is v2026.11.11. The package supplies the active Figure 1 source, exported PDF/SVG/PNG and the TeX caption needed to compile the manuscript.
-
-The 11 November authorship revision lists Yanbo Bian as the sole and corresponding author. The PDF author metadata agrees. The first page, final page and all-page contact sheet were inspected after compilation. Pages 2-11 render identically to the preceding checked manuscript. All 36 fonts remain embedded; the paper remains 12 pages.

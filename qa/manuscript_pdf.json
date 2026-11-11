@@ -14,19 +14,7 @@
   "figure1": "overview_mechanism.pdf",
   "figure1_placement": "full text width on page 3",
   "caption_matches_user_selected_version": true,
-  "sha256": "ab6930300debc14269cb8877323f45e055544de296733782da8576d596123bbb",
+  "sha256": "039c18536fed4dbd939c70985912e69f05753affd4c782da052d4c113a952591",
   "regression_checks": 7,
-  "full_data_replay_basis": "Existing validated corrected snapshot. Scientific execution code and main summaries match the preceding checked release.",
-  "authors": [
-    "Yanbo Bian"
-  ],
-  "corresponding_authors": [
-    "Yanbo Bian"
-  ],
-  "pdf_author": "Yanbo Bian",
-  "changed_rendered_pages": [
-    1,
-    12
-  ],
-  "removed_author_absent": true
+  "full_data_replay_basis": "Existing validated corrected snapshot. Scientific execution code and main summaries match the preceding checked release."
 }
