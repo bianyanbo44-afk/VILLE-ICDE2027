@@ -2,6 +2,8 @@
 
 This package reconstructs the experiments in "VILLE: Certified Decision Queries over LLM-Evaluated Data with Proxy-Rectified E-Processes" from fixed model judgments and proxy scores.
 
+Author: Yanbo Bian (sole and corresponding author), Beijing Jiaotong University. ORCID: [0009-0003-0014-8435](https://orcid.org/0009-0003-0014-8435).
+
 Download the complete [submission package](https://github.com/bianyanbo44-afk/VILLE-ICDE2027/releases/tag/v2026.11.11) for the fixed labels, proxies and detailed execution records.
 
 ## Environment
